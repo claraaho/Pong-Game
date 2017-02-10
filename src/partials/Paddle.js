@@ -1,4 +1,4 @@
-import { SVG_NS } from '../settings';
+import { SVG_NS, PADDLE } from '../settings';
 
 export default class Paddle {
   constructor(boardHeight, width, height, x, y, up, down) {
@@ -7,21 +7,29 @@ export default class Paddle {
     this.height = height;
     this.x = x;
     this.y = y;
-    this.speed = 10;
+    this.speed = PADDLE.speed;
     this.score = 0;
 
     document.addEventListener('keydown', event => {
       switch (event.keyCode) {
         case up:
-          this.y -= this.speed;
+          this.up();
           break;
         case down:
-          this.y += this.speed;
+          this.down();
           break;
       }
     });
-
   }
+
+  up() {
+    this.y = Math.max(0, this.y - this.speed);
+  }
+
+  down() {
+    this.y = Math.min(this.boardHeight - this.height, this.y + this.speed);
+  }
+
   render(svg) {
     let rect = document.createElementNS(SVG_NS, 'rect');
     rect.setAttributeNS(null, 'x', this.x);

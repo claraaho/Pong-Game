@@ -460,8 +460,6 @@
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	// import { KEYS } from '../settings';
-
 	var Game = function () {
 		function Game(element, width, height) {
 			_classCallCheck(this, Game);
@@ -471,13 +469,13 @@
 			this.height = height;
 
 			this.boardGap = 10;
-			this.paddleWidth = 8;
-			this.paddleHeight = 56;
+			this.paddleWidth = _settings.PADDLE.width;
+			this.paddleHeight = _settings.PADDLE.height;
 
 			this.gameElement = document.getElementById(this.element);
 			this.board = new _Board2.default(this.width, this.height);
-			this.paddle1 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.boardGap, (this.height - this.paddleHeight) / 2);
-			this.paddle2 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.width - this.boardGap - this.paddleWidth, (this.height - this.paddleHeight) / 2);
+			this.paddle1 = new _Paddle2.default(this.height, _settings.PADDLE.width, this.paddleHeight, this.boardGap, (this.height - _settings.PADDLE.height) / 2, _settings.KEYS.a, _settings.KEYS.z);
+			this.paddle2 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.width - this.boardGap - _settings.PADDLE.width, (this.height - _settings.PADDLE.height) / 2, _settings.KEYS.up, _settings.KEYS.down);
 		}
 
 		_createClass(Game, [{
@@ -519,6 +517,16 @@
 	  up: 38, // player 2 up key
 	  down: 40, // player 2 down key
 	  spaceBar: 32 };
+
+	var PADDLE = exports.PADDLE = {
+	  width: 8,
+	  height: 56,
+	  speed: 10
+	};
+
+	var BOARD = exports.BOARD = {
+	  gap: 10
+	};
 
 /***/ },
 /* 11 */
@@ -589,6 +597,8 @@
 
 	var Paddle = function () {
 	  function Paddle(boardHeight, width, height, x, y, up, down) {
+	    var _this = this;
+
 	    _classCallCheck(this, Paddle);
 
 	    this.boardHeight = boardHeight;
@@ -596,37 +606,32 @@
 	    this.height = height;
 	    this.x = x;
 	    this.y = y;
-	    this.speed = 10;
+	    this.speed = _settings.PADDLE.speed;
 	    this.score = 0;
-	    this.up = up;
-	    this.down = down;
 
 	    document.addEventListener('keydown', function (event) {
-	      console.log(event.keyCode);
+	      switch (event.keyCode) {
+	        case up:
+	          _this.up();
+	          break;
+	        case down:
+	          _this.down();
+	          break;
+	      }
 	    });
-
-	    // document.addEventListener('keydown', event => {
-	    //   switch (event.keyCode) {
-	    //     case 65:
-	    //       this.y -= this.speed;
-	    //       break;
-	    //     case 90:
-	    //       this.y += this.speed;
-	    //       break;
-	    //   }
-
-	    //   switch (event.keyCodes) {
-	    //     case 38:
-	    //       this.y -= this.speed;
-	    //       break;
-	    //     case 40:
-	    //       this.y += this.speed;
-	    //       break;
-	    //   }
-	    // });
 	  }
 
 	  _createClass(Paddle, [{
+	    key: 'up',
+	    value: function up() {
+	      this.y = Math.max(0, this.y - this.speed);
+	    }
+	  }, {
+	    key: 'down',
+	    value: function down() {
+	      this.y = Math.min(this.boardHeight - this.height, this.y + this.speed);
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render(svg) {
 	      var rect = document.createElementNS(_settings.SVG_NS, 'rect');
