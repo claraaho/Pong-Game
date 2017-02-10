@@ -10,6 +10,19 @@ export default class Ball {
     this.reset();
   }
 
+  wallCollision() {
+    const hitLeft = this.x - this.radius <= 0;
+    const hitRight = this.x + this.radius >= this.boardWidth;
+    const hitTop = this.y - this.radius <= 0;
+    const hitBottom = this.y + this.radius >= this.boardHeight;
+
+    if (hitLeft || hitRight ) {
+      this.vx = -this.vx;
+    } else if (hitTop || hitBottom) {
+      this.vy = -this.vy;
+    }
+  }
+
   reset() {
     this.x = this.boardWidth / 2;
     this.y = this.boardHeight / 2;
@@ -24,6 +37,8 @@ export default class Ball {
   render(svg) {
     this.x += this.vx;
     this.y += this.vy;
+
+    this.wallCollision();
 
     let circle = document.createElementNS(SVG_NS, 'circle');
     circle.setAttributeNS(null, 'r', this.radius);

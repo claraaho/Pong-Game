@@ -13,7 +13,8 @@ export default class Game {
 		this.boardGap = BOARD.gap;
 		this.paddleWidth = PADDLE.width;
 		this.paddleHeight = PADDLE.height;
-		this.radius = BALL.radius
+		this.radius = BALL.radius;
+		this.space = false;
 	
 		this.gameElement = document.getElementById(this.element);
 		this.board = new Board(this.width, this.height);
@@ -37,9 +38,21 @@ export default class Game {
 			);
 		this.ball = new Ball(
 			this.radius, this.width, this.height, this.direction);
-	}
+
+	document.addEventListener('keydown', event => {
+      switch (event.keyCode) {
+        case KEYS.spaceBar:
+          this.pause = !this.pause;
+          break;
+      }
+    });
+}
 
 	render() {
+
+		if(this.pause) {
+			return;
+		}
 
 		this.gameElement.innerHTML = '';
 
