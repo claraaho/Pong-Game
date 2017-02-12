@@ -6,12 +6,15 @@ export const KEYS = {
   up: 38, 
   down: 40, 
   spaceBar: 32, 
+  shift: 16,
+  left: 37,
+  cap: 20
 }
 
 export const PADDLE = {
   width: 8,
   height: 56,
-  speed: 15,
+  speed: 25,
 }
 
 export const BOARD = {

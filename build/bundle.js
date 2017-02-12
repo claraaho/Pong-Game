@@ -61,6 +61,21 @@
 	    requestAnimationFrame(gameLoop);
 	})();
 
+	// document.addEventListener('keydown', event => {
+	// 			switch (event.keyCode) {
+	// 				case KEYS.cap:
+	// 					this.fireball.render(svg);
+	// 					break;
+	// 			}
+	// 		});
+
+	//         document.getElementById('mute').addEventListener('click', function (e)
+	// {
+	//     e = e || window.event;
+	//     audio.muted = !audio.muted;
+	//     e.preventDefault();
+	// }, false);
+
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
@@ -96,7 +111,7 @@
 
 
 	// module
-	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n}\nol, ul {\n\tlist-style: none;\n}\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}\n\n/**\n * FONTS\n */\n\n@font-face {\n  font-family: 'Silkscreen Web';\n  src: url(" + __webpack_require__(4) + ");\n  src: url(" + __webpack_require__(4) + "?#iefix) format('embedded-opentype'),\n    url(" + __webpack_require__(5) + ") format('woff'),\n    url(" + __webpack_require__(6) + ") format('truetype'),\n    url(" + __webpack_require__(7) + "#silkscreennormal) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n\n/**\n * GAME\n */\n\nhtml {\n  font-size: 16px;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  font-family: 'Silkscreen Web', monotype;\n  height: 100vh;\n  justify-content: center;\n  width: 100%;\n}\n\nh1 {\n  font-size: 2.5rem;\n  margin-bottom: 1rem; \n  text-align: center;\n}\n", ""]);
+	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n}\nol, ul {\n\tlist-style: none;\n}\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}\n\n/**\n * FONTS\n */\n\n@font-face {\n  font-family: 'Silkscreen Web';\n  src: url(" + __webpack_require__(4) + ");\n  src: url(" + __webpack_require__(4) + "?#iefix) format('embedded-opentype'),\n    url(" + __webpack_require__(5) + ") format('woff'),\n    url(" + __webpack_require__(6) + ") format('truetype'),\n    url(" + __webpack_require__(7) + "#silkscreennormal) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n\n/**\n * GAME\n */\n\nhtml {\n  font-size: 16px;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  font-family: 'Silkscreen Web', monotype;\n  height: 100vh;\n  justify-content: center;\n  width: 100%;\n}\n\nh1 {\n  font-size: 2.5rem;\n  margin-bottom: 1rem; \n  text-align: center;\n}\n\n.game-info {\n  display: flex;\n  justify-content: space-between;\n  text-align: center;\n}\n", ""]);
 
 	// exports
 
@@ -463,6 +478,10 @@
 
 	var _Score2 = _interopRequireDefault(_Score);
 
+	var _Fireball = __webpack_require__(15);
+
+	var _Fireball2 = _interopRequireDefault(_Fireball);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -485,6 +504,7 @@
 			this.ball = new _Ball2.default(_settings.BALL.radius, this.width, this.height, this.direction);
 			this.score1 = new _Score2.default(this.width / 2 - 50, _settings.SCORE.y, _settings.SCORE.size);
 			this.score2 = new _Score2.default(this.width / 2 + 25, _settings.SCORE.y, _settings.SCORE.size);
+			this.fireball = new _Fireball2.default(_settings.BALL.radius, this.width, this.height, this.direction);
 
 			document.addEventListener('keydown', function (event) {
 				switch (event.keyCode) {
@@ -493,11 +513,23 @@
 						break;
 				}
 			});
+
+			var audio = document.getElementById('background_audio');
+
+			document.getElementById('mute').addEventListener('keydown', function (e) {
+				switch (event.keyCode) {
+					case _settings.KEYS.shift:
+						e = e || window.event;
+						audio.muted = !audio.muted;
+						e.preventDefault();
+				}
+			}, false);
 		}
 
 		_createClass(Game, [{
 			key: 'render',
 			value: function render() {
+				var _this2 = this;
 
 				if (this.pause) {
 					return;
@@ -518,6 +550,15 @@
 				this.paddle2.render(svg);
 				this.score1.render(svg, this.paddle1.score);
 				this.score2.render(svg, this.paddle2.score);
+
+				document.addEventListener('keydown', function (event) {
+					switch (event.keyCode) {
+						case _settings.KEYS.cap:
+							_this2.fireball.render(svg);
+							break;
+					}
+				});
+				// this.fireball.render(svg);
 			}
 		}]);
 
@@ -542,13 +583,16 @@
 	  z: 90,
 	  up: 38,
 	  down: 40,
-	  spaceBar: 32
+	  spaceBar: 32,
+	  shift: 16,
+	  left: 37,
+	  cap: 20
 	};
 
 	var PADDLE = exports.PADDLE = {
 	  width: 8,
 	  height: 56,
-	  speed: 15
+	  speed: 25
 	};
 
 	var BOARD = exports.BOARD = {
@@ -644,6 +688,7 @@
 	    this.y = y;
 	    this.speed = _settings.PADDLE.speed;
 	    this.score = 0;
+	    this.cy = this.getCenter();
 
 	    document.addEventListener('keydown', function (event) {
 	      switch (event.keyCode) {
@@ -653,11 +698,20 @@
 	        case down:
 	          _this.down();
 	          break;
+	        // case left:
+	        //   break;
+	        // case cap:
+	        // break;
 	      }
 	    });
 	  }
 
 	  _createClass(Paddle, [{
+	    key: 'getCenter',
+	    value: function getCenter() {
+	      this.center = this.y + this.height / 2;
+	    }
+	  }, {
 	    key: 'up',
 	    value: function up() {
 	      this.y = Math.max(0, this.y - this.speed);
@@ -721,7 +775,7 @@
 	    this.boardWidth = boardWidth;
 	    this.boardHeight = boardHeight;
 	    this.direction = 1;
-	    this.ping = new Audio('public/sounds/pong-04.wav');
+	    // this.ping = new Audio('public/sounds/pong-04.wav');
 
 	    this.reset();
 	  }
@@ -754,7 +808,7 @@
 
 	        if (this.x + this.radius >= leftX && this.x + this.radius <= rightX && this.y >= topY && this.y <= bottomY) {
 	          this.vx = -this.vx;
-	          this.ping.play();
+	          // this.ping.play();
 	        }
 	      } else {
 	        var _paddle2 = paddle1.coordinates(paddle1.x, paddle1.y, paddle1.width, paddle1.height);
@@ -867,6 +921,71 @@
 	}();
 
 	exports.default = Score;
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _settings = __webpack_require__(10);
+
+	var _Paddle = __webpack_require__(12);
+
+	var _Paddle2 = _interopRequireDefault(_Paddle);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var Fireball = function () {
+	  function Fireball(radius, boardWidth, boardHeight) {
+	    _classCallCheck(this, Fireball);
+
+	    this.radius = radius;
+	    this.boardWidth = boardWidth;
+	    this.boardHeight = boardHeight;
+	    this.direction = 1;
+
+	    this.fire();
+	  }
+
+	  _createClass(Fireball, [{
+	    key: 'fire',
+	    value: function fire() {
+	      this.x = 10;
+	      this.y = _Paddle2.default.cy;
+
+	      this.vy = 0;
+	      this.vx = this.direction * (6 - Math.abs(this.vy));
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render(svg) {
+	      this.x += this.vx;
+	      this.y += this.vy;
+
+	      var circle = document.createElementNS(_settings.SVG_NS, 'circle');
+	      circle.setAttributeNS(null, 'r', this.radius);
+	      circle.setAttributeNS(null, 'stroke', '#FFF');
+	      circle.setAttributeNS(null, 'fill', '#FFF');
+	      circle.setAttributeNS(null, 'cx', this.x);
+	      circle.setAttributeNS(null, 'cy', this.y);
+
+	      svg.appendChild(circle);
+	    }
+	  }]);
+
+	  return Fireball;
+	}();
+
+	exports.default = Fireball;
 
 /***/ }
 /******/ ]);

@@ -9,6 +9,7 @@ export default class Paddle {
     this.y = y;
     this.speed = PADDLE.speed;
     this.score = 0;
+    this.cy = this.getCenter();
 
     document.addEventListener('keydown', event => {
       switch (event.keyCode) {
@@ -20,6 +21,10 @@ export default class Paddle {
           break;
       }
     });
+  }
+
+  getCenter() {
+    this.center = this.y + (this.height/2);
   }
 
   up() {

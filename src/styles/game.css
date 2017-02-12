@@ -80,7 +80,18 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem; 
   text-align: center;
+}
+
+a {
+  color: #000;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 1.3rem;
 }

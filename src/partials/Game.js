@@ -3,6 +3,7 @@ import Board from './Board';
 import Paddle from './Paddle';
 import Ball from './Ball';
 import Score from './Score';
+import Fireball from './Fireball';
 
 export default class Game {
 
@@ -35,6 +36,7 @@ export default class Game {
 		this.ball = new Ball(BALL.radius, this.width, this.height, this.direction);
 		this.score1 = new Score(this.width / 2 - 50, SCORE.y, SCORE.size);
 		this.score2 = new Score(this.width / 2 + 25, SCORE.y, SCORE.size);
+		this.fireball = new Fireball(BALL.radius, this.width, this.height, this.direction);
 
 		document.addEventListener('keydown', event => {
 			switch (event.keyCode) {
@@ -66,5 +68,6 @@ export default class Game {
 		this.paddle2.render(svg);
 		this.score1.render(svg, this.paddle1.score);
 		this.score2.render(svg, this.paddle2.score);
+		this.fireball.render(svg);
 	}
 }

@@ -8,8 +8,27 @@
 
 <body>
 	<div class="game-wrapper">
-		<h1>Pong</h1>
+		<h1>Pong Fighter</h1>
 		<div id="game"></div>
+		<div class="game-info">
+			<div>
+				<p>P1</p>
+				<p>up: A</p>
+				<p>down: Z</p>
+			</div>
+			<div>
+				<p>Spacebar = Pause Game</p>
+				<audio id="background_audio" autoplay="autoplay">
+					<source src="./public/sounds/ryu_theme.mp3" />
+				</audio>
+				<a href="#noscroll" id="mute">toggle sound</a>
+			</div>
+			<div>
+				<p>P2</p>
+				<p>up: &uarr;</p>
+				<p>down: &darr;</p>
+			</div>
+		</div>
 	</div>
 	<script type="text/javascript" src="build/bundle.js"></script>
 </body>
