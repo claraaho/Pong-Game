@@ -1,6 +1,7 @@
 # PONG FIGHTERS
 
 A remake of the classic Pong game inspired by Street Fighters. (POW!)
+![pong screenshot](/public/images/pong_screenshot.png)
 
 ## Setup
 **Install:**
@@ -39,3 +40,5 @@ This project introduced me to Webpack, Babel, and ES2015 which I had no knowledg
  # Fix error/figure proper solution to instantiating empty ball
  # Start the ball with direction going either sides
  # Add energy ball upon trigger from paddles
+
+ credits to https://www.freesound.org/ & http://alphacoders.com for the sound and picture files!
