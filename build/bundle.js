@@ -749,7 +749,7 @@
 	    this.radius = radius;
 	    this.boardWidth = boardWidth;
 	    this.boardHeight = boardHeight;
-	    this.direction = 1;
+	    this.direction = Math.random() < 0.5 ? 1 : -1;
 	    this.ping = new Audio('public/sounds/hadouken.wav');
 
 	    this.reset();
@@ -816,9 +816,6 @@
 	    key: 'goal',
 	    value: function goal(player) {
 	      player.score++;
-	      if (player.score >= 7) {
-	        alert(hi);
-	      }
 	      this.reset();
 	    }
 	  }, {
@@ -925,7 +922,7 @@
 	    this.radius = radius;
 	    this.boardWidth = boardWidth;
 	    this.boardHeight = boardHeight;
-	    this.direction = 1;
+	    this.direction = Math.random() < 0.5 ? 1 : -1;
 	    this.ping = new Audio('public/sounds/hadouken.wav');
 
 	    this.reset();
