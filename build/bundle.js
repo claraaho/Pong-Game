@@ -682,6 +682,12 @@
 	  }
 
 	  _createClass(Paddle, [{
+	    key: 'sizeUp',
+	    value: function sizeUp() {
+	      this.width = 20;
+	      this.height = 100;
+	    }
+	  }, {
 	    key: 'getCenter',
 	    value: function getCenter() {
 	      this.center = this.y + this.height / 2;

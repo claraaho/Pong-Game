@@ -1,7 +1,4 @@
-import {
-  SVG_NS,
-  PADDLE
-} from '../settings';
+import { SVG_NS, PADDLE, KEYS } from '../settings';
 
 export default class Paddle {
   constructor(boardHeight, width, height, x, y, up, down) {
@@ -22,8 +19,23 @@ export default class Paddle {
         case down:
           this.down();
           break;
+        case KEYS.b:
+          this.changePaddle();
+          break;
       }
     });
+  }
+
+  changePaddle() {
+    if (this.width === PADDLE.width) {
+      this.width = PADDLE.widthChange;
+      this.height = PADDLE.heightChange;
+      this.speed = PADDLE.speedChange;
+    } else {
+      this.width = PADDLE.width;
+      this.height = PADDLE.height;
+      this.speed = PADDLE.speed;
+    }
   }
 
   getCenter() {

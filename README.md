@@ -13,7 +13,8 @@ A remake of the classic Pong game inspired by Street Fighters. (POW!)
 ## Key Bindings
 **Game controls**
  * spacebar: pause
- * v: add 1 ball
+ * V: add 1 ball
+ * B: increase/decrease paddle size and speed
 
 **Player 1:**
  * a: up
@@ -24,7 +25,7 @@ A remake of the classic Pong game inspired by Street Fighters. (POW!)
  * ▼: down
 
 ##Gameplay
-Control the paddles up and down to deflect the balls away from your sideline with the objective to score on the opponent's side. An energy ball can be summoned by triggering the V key (Hadouken!) to vamp up the game difficulty!
+Control the paddles up and down to deflect the balls away from your sideline with the objective to score on the opponent's side. An energy ball can be summoned by triggering the V key (Hadouken!) and the paddle size can be manipulated to vamp up the diffculty!
 
 ##Technology 
  * HTML
