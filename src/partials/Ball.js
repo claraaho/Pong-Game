@@ -3,12 +3,13 @@ import {
 } from '../settings';
 
 export default class Ball {
-  constructor(radius, boardWidth, boardHeight) {
+  constructor(radius, boardWidth, boardHeight, fill) {
     this.radius = radius;
     this.boardWidth = boardWidth;
     this.boardHeight = boardHeight;
     this.direction = Math.random() < 0.5 ? 1 : -1;
     this.ping = new Audio('public/sounds/hadouken.wav');
+    this.fill = fill;
 
     this.reset();
   }
@@ -78,7 +79,7 @@ export default class Ball {
     let circle = document.createElementNS(SVG_NS, 'circle');
     circle.setAttributeNS(null, 'r', this.radius);
     circle.setAttributeNS(null, 'stroke', '#000');
-    circle.setAttributeNS(null, 'fill', '#FFF');
+    circle.setAttributeNS(null, 'fill', this.fill);
     circle.setAttributeNS(null, 'cx', this.x);
     circle.setAttributeNS(null, 'cy', this.y);
 

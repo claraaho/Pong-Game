@@ -1,6 +1,7 @@
 import {
   SVG_NS
 } from '../settings';
+import Paddle from './Paddle';
 
 export default class Fireball {
   constructor(radius, boardWidth, boardHeight) {
@@ -14,7 +15,8 @@ export default class Fireball {
 
   fire() {
     this.x = 10;
-    this.y = this.center = this.y + (this.height / 2);
+    this.y = this.boardHeight / 2;
+    this.y = Paddle.y + (Paddle.height / 2);
 
     this.vy = 0;
     this.vx = this.direction * (6 - Math.abs(this.vy));
@@ -26,8 +28,8 @@ export default class Fireball {
 
     let circle = document.createElementNS(SVG_NS, 'circle');
     circle.setAttributeNS(null, 'r', this.radius);
-    circle.setAttributeNS(null, 'stroke', '#FFF');
-    circle.setAttributeNS(null, 'fill', '#FFF');
+    circle.setAttributeNS(null, 'stroke', 'yellow');
+    circle.setAttributeNS(null, 'fill', 'red');
     circle.setAttributeNS(null, 'cx', this.x);
     circle.setAttributeNS(null, 'cy', this.y);
 
