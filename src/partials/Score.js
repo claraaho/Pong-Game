@@ -1,4 +1,6 @@
-import { SVG_NS } from '../settings';
+import {
+  SVG_NS
+} from '../settings';
 
 export default class Score {
   constructor(x, y, size) {

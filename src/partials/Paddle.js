@@ -1,4 +1,7 @@
-import { SVG_NS, PADDLE } from '../settings';
+import {
+  SVG_NS,
+  PADDLE
+} from '../settings';
 
 export default class Paddle {
   constructor(boardHeight, width, height, x, y, up, down) {
@@ -24,7 +27,7 @@ export default class Paddle {
   }
 
   getCenter() {
-    this.center = this.y + (this.height/2);
+    this.center = this.y + (this.height / 2);
   }
 
   up() {

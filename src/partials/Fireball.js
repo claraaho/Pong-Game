@@ -14,15 +14,15 @@ export default class Fireball {
 
   fire() {
     this.x = 10;
-    this.y = this.center = this.y + (this.height/2);
+    this.y = this.center = this.y + (this.height / 2);
 
     this.vy = 0;
     this.vx = this.direction * (6 - Math.abs(this.vy));
   }
 
   render(svg) {
-      this.x += this.vx;
-      this.y += this.vy;
+    this.x += this.vx;
+    this.y += this.vy;
 
     let circle = document.createElementNS(SVG_NS, 'circle');
     circle.setAttributeNS(null, 'r', this.radius);
@@ -32,5 +32,5 @@ export default class Fireball {
     circle.setAttributeNS(null, 'cy', this.y);
 
     svg.appendChild(circle);
- }
+  }
 }
