@@ -564,13 +564,17 @@
 	  up: 38,
 	  down: 40,
 	  spaceBar: 32,
-	  v: 86
+	  v: 86,
+	  b: 66
 	};
 
 	var PADDLE = exports.PADDLE = {
 	  width: 8,
 	  height: 56,
-	  speed: 25
+	  speed: 20,
+	  widthChange: 5,
+	  heightChange: 30,
+	  speedChange: 40
 	};
 
 	var BOARD = exports.BOARD = {
@@ -677,15 +681,25 @@
 	        case down:
 	          _this.down();
 	          break;
+	        case _settings.KEYS.b:
+	          _this.changePaddle();
+	          break;
 	      }
 	    });
 	  }
 
 	  _createClass(Paddle, [{
-	    key: 'sizeUp',
-	    value: function sizeUp() {
-	      this.width = 20;
-	      this.height = 100;
+	    key: 'changePaddle',
+	    value: function changePaddle() {
+	      if (this.width === _settings.PADDLE.width) {
+	        this.width = _settings.PADDLE.widthChange;
+	        this.height = _settings.PADDLE.heightChange;
+	        this.speed = _settings.PADDLE.speedChange;
+	      } else {
+	        this.width = _settings.PADDLE.width;
+	        this.height = _settings.PADDLE.height;
+	        this.speed = _settings.PADDLE.speed;
+	      }
 	    }
 	  }, {
 	    key: 'getCenter',

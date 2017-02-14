@@ -1,7 +1,7 @@
 # PONG FIGHTERS
 
 A remake of the classic Pong game inspired by Street Fighters. (POW!)
-![pong screenshot](/public/images/pong_screenshot.png)
+![pong screenshot](/public/images/pong_scrnshot.png)
 
 ## Setup
 **Install:**
