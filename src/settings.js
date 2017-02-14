@@ -6,9 +6,9 @@ export const KEYS = {
   up: 38, 
   down: 40, 
   spaceBar: 32, 
-  shift: 16,
-  left: 37,
-  cap: 20
+  v: 86,
+  // left: 37,
+  // // cap: 20
 }
 
 export const PADDLE = {

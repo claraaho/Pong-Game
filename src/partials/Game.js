@@ -3,7 +3,8 @@ import Board from './Board';
 import Paddle from './Paddle';
 import Ball from './Ball';
 import Score from './Score';
-import Fireball from './Fireball';
+import Ball2 from './Ball2';
+// import Fireball from './Fireball';
 
 export default class Game {
 
@@ -36,12 +37,16 @@ export default class Game {
 		this.ball = new Ball(BALL.radius, this.width, this.height, this.direction);
 		this.score1 = new Score(this.width / 2 - 50, SCORE.y, SCORE.size);
 		this.score2 = new Score(this.width / 2 + 25, SCORE.y, SCORE.size);
-		this.fireball = new Fireball(BALL.radius, this.width, this.height, this.direction);
+		this.ball2 = new Ball2();
+		// this.fireball = new Fireball(BALL.radius, this.width, this.height, this.direction);
 
 		document.addEventListener('keydown', event => {
 			switch (event.keyCode) {
 				case KEYS.spaceBar:
 					this.pause = !this.pause;
+					break;
+				case KEYS.v:
+					this.ball2 = new Ball2(BALL.radius, this.width, this.height);
 					break;
 			}
 		});
@@ -68,6 +73,7 @@ export default class Game {
 		this.paddle2.render(svg);
 		this.score1.render(svg, this.paddle1.score);
 		this.score2.render(svg, this.paddle2.score);
-		this.fireball.render(svg);
+		this.ball2.render(svg, this.paddle1, this.paddle2);
+		// this.fireball.render(svg);
 	}
 }

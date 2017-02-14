@@ -77,16 +77,19 @@ body {
   height: 100vh;
   justify-content: center;
   width: 100%;
+  background-size: cover;
 }
 
 h1 {
   font-size: 3rem;
   margin-bottom: 1rem; 
   text-align: center;
+  color: green;
+  text-shadow: 3px 3px black;
 }
 
 a {
-  color: #000;
+  color: darkgreen;
 }
 
 .game-info {
@@ -94,4 +97,6 @@ a {
   justify-content: space-between;
   text-align: center;
   font-size: 1.3rem;
+  color: darkgreen;
+  text-shadow: 1px 1px black;
 }

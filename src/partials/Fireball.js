@@ -1,7 +1,6 @@
 import {
   SVG_NS
 } from '../settings';
-import Paddle from './Paddle';
 
 export default class Fireball {
   constructor(radius, boardWidth, boardHeight) {
@@ -15,7 +14,7 @@ export default class Fireball {
 
   fire() {
     this.x = 10;
-    this.y = Paddle.cy;
+    this.y = this.center = this.y + (this.height/2);
 
     this.vy = 0;
     this.vx = this.direction * (6 - Math.abs(this.vy));
