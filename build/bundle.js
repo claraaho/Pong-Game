@@ -816,6 +816,9 @@
 	    key: 'goal',
 	    value: function goal(player) {
 	      player.score++;
+	      if (player.score >= 7) {
+	        alert(hi);
+	      }
 	      this.reset();
 	    }
 	  }, {
