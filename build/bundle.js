@@ -492,7 +492,6 @@
 			this.ball = new _Ball2.default(_settings.BALL.radius, this.width, this.height, '#FFF', this.direction);
 			this.leftScore = this.createScore(this.width / 2 - 50);
 			this.rightScore = this.createScore(this.width / 2 + 25);
-			// this.ball2 = new Ball();
 
 			this.eventListener();
 		}
@@ -541,6 +540,7 @@
 				this.board.render(svg);
 				this.leftPaddle.render(svg);
 				this.rightPaddle.render(svg);
+
 				this.ball.render(svg, this.leftPaddle, this.rightPaddle);
 				this.leftScore.render(svg, this.leftPaddle.score);
 				this.rightScore.render(svg, this.rightPaddle.score);
