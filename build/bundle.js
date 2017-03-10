@@ -104,7 +104,7 @@
 
 
 	// module
-	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nb,\nu,\ni,\ncenter,\ndl,\ndt,\ndd,\nol,\nul,\nli,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n\n\n/* HTML5 display-role reset for older browsers */\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\nsection {\n  display: block;\n}\n\nbody {\n  line-height: 1;\n}\n\nol,\nul {\n  list-style: none;\n}\n\nblockquote,\nq {\n  quotes: none;\n}\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n\n\n/**\n * FONTS\n */\n\n@font-face {\n  font-family: 'Silkscreen Web';\n  src: url(" + __webpack_require__(4) + ");\n  src: url(" + __webpack_require__(4) + "?#iefix) format('embedded-opentype'), url(" + __webpack_require__(5) + ") format('woff'), url(" + __webpack_require__(6) + ") format('truetype'), url(" + __webpack_require__(7) + "#silkscreennormal) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n\n\n/**\n * GAME\n */\n\nhtml {\n  font-size: 16px;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  font-family: 'Silkscreen Web', monotype;\n  height: 100vh;\n  justify-content: center;\n  width: 100%;\n  background-size: cover;\n}\n\nh1 {\n  font-size: 3rem;\n  margin-bottom: 1rem;\n  text-align: center;\n  color: green;\n  text-shadow: 5px 5px black;\n}\n\na {\n  color: darkgreen;\n}\n\n.game-info {\n  display: flex;\n  justify-content: space-between;\n  text-align: center;\n  font-size: 1.3rem;\n  color: darkgreen;\n  text-shadow: 1px 1px black;\n}", ""]);
+	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nb,\nu,\ni,\ncenter,\ndl,\ndt,\ndd,\nol,\nul,\nli,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n\n\n/* HTML5 display-role reset for older browsers */\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\nsection {\n  display: block;\n}\n\nbody {\n  line-height: 1;\n}\n\nol,\nul {\n  list-style: none;\n}\n\nblockquote,\nq {\n  quotes: none;\n}\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n\n\n/**\n * FONTS\n */\n\n@font-face {\n  font-family: 'Silkscreen Web';\n  src: url(" + __webpack_require__(4) + ");\n  src: url(" + __webpack_require__(4) + "?#iefix) format('embedded-opentype'), url(" + __webpack_require__(5) + ") format('woff'), url(" + __webpack_require__(6) + ") format('truetype'), url(" + __webpack_require__(7) + "#silkscreennormal) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n\n\n/**\n * GAME\n */\n\nhtml {\n  font-size: 16px;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  font-family: 'Silkscreen Web', monotype;\n  height: 100vh;\n  justify-content: center;\n  width: 100%;\n  background-size: cover;\n}\n\nh1 {\n  font-size: 3rem;\n  margin-bottom: 1rem;\n  text-align: center;\n  color: green;\n  text-shadow: 3px 3px black;\n}\n\na {\n  color: darkgreen;\n}\n\n.game-info {\n  display: flex;\n  justify-content: space-between;\n  text-align: center;\n  font-size: 1.3rem;\n  color: darkgreen;\n  text-shadow: 1px 1px black;\n}", ""]);
 
 	// exports
 
@@ -471,20 +471,12 @@
 
 	var _Score2 = _interopRequireDefault(_Score);
 
-	var _Ball3 = __webpack_require__(15);
-
-	var _Ball4 = _interopRequireDefault(_Ball3);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	// import Fireball from './Fireball';
-
 	var Game = function () {
 		function Game(element, width, height) {
-			var _this = this;
-
 			_classCallCheck(this, Game);
 
 			this.element = element;
@@ -494,27 +486,44 @@
 
 			this.gameElement = document.getElementById(this.element);
 			this.board = new _Board2.default(this.width, this.height);
-			this.paddle1 = new _Paddle2.default(this.height, _settings.PADDLE.width, _settings.PADDLE.height, _settings.BOARD.gap, (this.height - _settings.PADDLE.height) / 2, _settings.KEYS.a, _settings.KEYS.z);
-			this.paddle2 = new _Paddle2.default(this.height, _settings.PADDLE.width, _settings.PADDLE.height, this.width - _settings.BOARD.gap - _settings.PADDLE.width, (this.height - _settings.PADDLE.height) / 2, _settings.KEYS.up, _settings.KEYS.down);
-			this.ball = new _Ball2.default(_settings.BALL.radius, this.width, this.height, this.direction);
-			this.score1 = new _Score2.default(this.width / 2 - 50, _settings.SCORE.y, _settings.SCORE.size);
-			this.score2 = new _Score2.default(this.width / 2 + 25, _settings.SCORE.y, _settings.SCORE.size);
-			this.ball2 = new _Ball4.default();
-			// this.fireball = new Fireball(BALL.radius, this.width, this.height, this.direction);
+			this.leftPaddle = this.createPaddle(_settings.BOARD.gap, _settings.KEYS.a, _settings.KEYS.z);
+			this.rightPaddle = this.createPaddle(this.width - _settings.BOARD.gap - _settings.PADDLE.width, _settings.KEYS.up, _settings.KEYS.down);
 
-			document.addEventListener('keydown', function (event) {
-				switch (event.keyCode) {
-					case _settings.KEYS.spaceBar:
-						_this.pause = !_this.pause;
-						break;
-					case _settings.KEYS.v:
-						_this.ball2 = new _Ball4.default(_settings.BALL.radius, _this.width, _this.height);
-						break;
-				}
-			});
+			this.ball = new _Ball2.default(_settings.BALL.radius, this.width, this.height, '#FFF', this.direction);
+			this.leftScore = this.createScore(this.width / 2 - 50);
+			this.rightScore = this.createScore(this.width / 2 + 25);
+			// this.ball2 = new Ball();
+
+			this.eventListener();
 		}
 
 		_createClass(Game, [{
+			key: 'eventListener',
+			value: function eventListener() {
+				var _this = this;
+
+				document.addEventListener('keydown', function (event) {
+					switch (event.keyCode) {
+						case _settings.KEYS.spaceBar:
+							_this.pause = !_this.pause;
+							break;
+						case _settings.KEYS.v:
+							_this.ball2 = new _Ball2.default(_settings.BALL.radius, _this.width, _this.height, 'lightblue');
+							break;
+					}
+				});
+			}
+		}, {
+			key: 'createPaddle',
+			value: function createPaddle(xPos, upKey, downKey) {
+				return new _Paddle2.default(this.height, _settings.PADDLE.width, _settings.PADDLE.height, xPos, (this.height - _settings.PADDLE.height) / 2, upKey, downKey);
+			}
+		}, {
+			key: 'createScore',
+			value: function createScore(xPos) {
+				return new _Score2.default(xPos, _settings.SCORE.y, _settings.SCORE.size);
+			}
+		}, {
 			key: 'render',
 			value: function render() {
 
@@ -530,15 +539,15 @@
 				svg.setAttributeNS(null, 'viewBox', '0 0 ' + this.width + ' ' + this.height);
 				this.gameElement.appendChild(svg);
 				this.board.render(svg);
-				this.paddle1.render(svg);
-				this.paddle2.render(svg);
-				this.ball.render(svg, this.paddle1, this.paddle2);
-				this.paddle1.render(svg);
-				this.paddle2.render(svg);
-				this.score1.render(svg, this.paddle1.score);
-				this.score2.render(svg, this.paddle2.score);
-				this.ball2.render(svg, this.paddle1, this.paddle2);
-				// this.fireball.render(svg);
+				this.leftPaddle.render(svg);
+				this.rightPaddle.render(svg);
+				this.ball.render(svg, this.leftPaddle, this.rightPaddle);
+				this.leftScore.render(svg, this.leftPaddle.score);
+				this.rightScore.render(svg, this.rightPaddle.score);
+
+				if (this.ball2) {
+					this.ball2.render(svg, this.leftPaddle, this.rightPaddle);
+				}
 			}
 		}]);
 
@@ -763,7 +772,7 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var Ball = function () {
-	  function Ball(radius, boardWidth, boardHeight) {
+	  function Ball(radius, boardWidth, boardHeight, fill) {
 	    _classCallCheck(this, Ball);
 
 	    this.radius = radius;
@@ -771,6 +780,7 @@
 	    this.boardHeight = boardHeight;
 	    this.direction = Math.random() < 0.5 ? 1 : -1;
 	    this.ping = new Audio('public/sounds/hadouken.wav');
+	    this.fill = fill;
 
 	    this.reset();
 	  }
@@ -850,7 +860,7 @@
 	      var circle = document.createElementNS(_settings.SVG_NS, 'circle');
 	      circle.setAttributeNS(null, 'r', this.radius);
 	      circle.setAttributeNS(null, 'stroke', '#000');
-	      circle.setAttributeNS(null, 'fill', '#FFF');
+	      circle.setAttributeNS(null, 'fill', this.fill);
 	      circle.setAttributeNS(null, 'cx', this.x);
 	      circle.setAttributeNS(null, 'cy', this.y);
 
@@ -916,135 +926,6 @@
 	}();
 
 	exports.default = Score;
-
-/***/ },
-/* 15 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _settings = __webpack_require__(10);
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var Ball = function () {
-	  function Ball(radius, boardWidth, boardHeight) {
-	    _classCallCheck(this, Ball);
-
-	    this.radius = radius;
-	    this.boardWidth = boardWidth;
-	    this.boardHeight = boardHeight;
-	    this.direction = Math.random() < 0.5 ? 1 : -1;
-	    this.ping = new Audio('public/sounds/hadouken.wav');
-
-	    this.reset();
-	  }
-
-	  _createClass(Ball, [{
-	    key: 'wallCollision',
-	    value: function wallCollision() {
-	      var hitLeft = this.x - this.radius <= 0;
-	      var hitRight = this.x + this.radius >= this.boardWidth;
-	      var hitTop = this.y - this.radius <= 0;
-	      var hitBottom = this.y + this.radius >= this.boardHeight;
-
-	      if (hitLeft || hitRight) {
-	        this.vx = -this.vx;
-	      } else if (hitTop || hitBottom) {
-	        this.vy = -this.vy;
-	      }
-	    }
-	  }, {
-	    key: 'paddleCollision',
-	    value: function paddleCollision(paddle1, paddle2) {
-	      if (this.vx > 0) {
-	        var paddle = paddle2.coordinates(paddle2.x, paddle2.y, paddle2.width, paddle2.height);
-
-	        var _paddle = _slicedToArray(paddle, 4),
-	            leftX = _paddle[0],
-	            rightX = _paddle[1],
-	            topY = _paddle[2],
-	            bottomY = _paddle[3];
-
-	        if (this.x + this.radius >= leftX && this.x + this.radius <= rightX && this.y >= topY && this.y <= bottomY) {
-	          this.vx = -this.vx;
-	          this.ping.play();
-	        }
-	      } else {
-	        var _paddle2 = paddle1.coordinates(paddle1.x, paddle1.y, paddle1.width, paddle1.height);
-
-	        var _paddle3 = _slicedToArray(_paddle2, 4),
-	            _leftX = _paddle3[0],
-	            _rightX = _paddle3[1],
-	            _topY = _paddle3[2],
-	            _bottomY = _paddle3[3];
-
-	        if (this.x - this.radius <= _rightX && this.x - this.radius >= _leftX && this.y >= _topY && this.y <= _bottomY) {
-	          this.vx = -this.vx;
-	          this.ping.play();
-	        }
-	      }
-	    }
-	  }, {
-	    key: 'reset',
-	    value: function reset() {
-	      this.x = this.boardWidth / 2;
-	      this.y = this.boardHeight / 2;
-
-	      this.vy = 0;
-	      while (this.vy === 0) {
-	        this.vy = Math.floor(Math.random() * 10 - 5);
-	      }
-	      this.vx = this.direction * (6 - Math.abs(this.vy));
-	    }
-	  }, {
-	    key: 'goal',
-	    value: function goal(player) {
-	      player.score++;
-	      this.reset();
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render(svg, paddle1, paddle2) {
-	      this.x += this.vx;
-	      this.y += this.vy;
-
-	      this.wallCollision();
-	      this.paddleCollision(paddle1, paddle2);
-
-	      var circle = document.createElementNS(_settings.SVG_NS, 'circle');
-	      circle.setAttributeNS(null, 'r', this.radius);
-	      circle.setAttributeNS(null, 'stroke', '#000');
-	      circle.setAttributeNS(null, 'fill', 'lightblue');
-	      circle.setAttributeNS(null, 'cx', this.x);
-	      circle.setAttributeNS(null, 'cy', this.y);
-
-	      svg.appendChild(circle);
-
-	      var rightGoal = this.x + this.radius >= this.boardWidth;
-	      var leftGoal = this.x - this.radius <= 0;
-	      if (rightGoal) {
-	        this.goal(paddle1);
-	        this.direction = 1;
-	      } else if (leftGoal) {
-	        this.goal(paddle2);
-	        this.direction = -1;
-	      }
-	    }
-	  }]);
-
-	  return Ball;
-	}();
-
-	exports.default = Ball;
 
 /***/ }
 /******/ ]);

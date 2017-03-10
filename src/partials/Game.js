@@ -3,7 +3,6 @@ import Board from './Board';
 import Paddle from './Paddle';
 import Ball from './Ball';
 import Score from './Score';
-// import Fireball from './Fireball';
 
 export default class Game {
 
@@ -15,30 +14,17 @@ export default class Game {
 
 		this.gameElement = document.getElementById(this.element);
 		this.board = new Board(this.width, this.height);
-		this.paddle1 = new Paddle(
-			this.height,
-			PADDLE.width,
-			PADDLE.height,
-			BOARD.gap,
-			(this.height - PADDLE.height) / 2,
-			KEYS.a,
-			KEYS.z
-		);
-		this.paddle2 = new Paddle(
-			this.height,
-			PADDLE.width,
-			PADDLE.height,
-			this.width - BOARD.gap - PADDLE.width,
-			(this.height - PADDLE.height) / 2,
-			KEYS.up,
-			KEYS.down
-		);
+		this.leftPaddle = this.createPaddle(BOARD.gap, KEYS.a, KEYS.z);
+		this.rightPaddle = this.createPaddle(this.width - BOARD.gap - PADDLE.width, KEYS.up, KEYS.down);
+		
 		this.ball = new Ball(BALL.radius, this.width, this.height, '#FFF', this.direction);
-		this.score1 = new Score(this.width / 2 - 50, SCORE.y, SCORE.size);
-		this.score2 = new Score(this.width / 2 + 25, SCORE.y, SCORE.size);
-		this.ball2 = new Ball();
-		// this.fireball = new Fireball(BALL.radius, this.width, this.height, this.direction);
+		this.leftScore = this.createScore(this.width / 2 - 50);
+		this.rightScore = this.createScore(this.width / 2 + 25);
 
+		this.eventListener();
+	}
+
+	eventListener() {
 		document.addEventListener('keydown', event => {
 			switch (event.keyCode) {
 				case KEYS.spaceBar:
@@ -49,6 +35,22 @@ export default class Game {
 					break;
 			}
 		});
+	}
+
+	createPaddle(xPos, upKey, downKey) {
+		return new Paddle(
+			this.height,
+			PADDLE.width,
+			PADDLE.height,
+			xPos,
+			(this.height - PADDLE.height) / 2,
+			upKey,
+			downKey
+		);
+	}
+
+	createScore(xPos) {
+		return new Score(xPos, SCORE.y, SCORE.size);
 	}
 
 	render() {
@@ -65,14 +67,15 @@ export default class Game {
 		svg.setAttributeNS(null, 'viewBox', `0 0 ${this.width} ${this.height}`);
 		this.gameElement.appendChild(svg);
 		this.board.render(svg);
-		this.paddle1.render(svg);
-		this.paddle2.render(svg);
-		this.ball.render(svg, this.paddle1, this.paddle2);
-		this.paddle1.render(svg);
-		this.paddle2.render(svg);
-		this.score1.render(svg, this.paddle1.score);
-		this.score2.render(svg, this.paddle2.score);
-		this.ball2.render(svg, this.paddle1, this.paddle2);
-		// this.fireball.render(svg);
+		this.leftPaddle.render(svg);
+		this.rightPaddle.render(svg);
+
+		this.ball.render(svg, this.leftPaddle, this.rightPaddle);
+		this.leftScore.render(svg, this.leftPaddle.score);
+		this.rightScore.render(svg, this.rightPaddle.score);
+
+		if(this.ball2) {
+			this.ball2.render(svg, this.leftPaddle, this.rightPaddle);
+		}
 	}
 }
